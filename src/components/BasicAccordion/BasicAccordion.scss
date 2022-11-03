@@ -1,0 +1,78 @@
+@import "../../styles/helpers/_variables.scss";
+@import "../../styles/helpers/_mixins.scss";
+
+.accordion {
+  border: 1px solid $light-grey-color-two;
+  border-radius: 2px;
+
+  &__item + .accordion__item {
+    border-top: 1px solid $light-grey-color-two;
+  }
+
+  &__button {
+    background-color: $light-grey-color-one;
+    color: $secondary-color;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      position: relative;
+      top: -2px;
+      height: 5px;
+      width: 5px;
+      margin-right: 22px;
+      border-bottom: 2px solid $secondary-color;
+      border-right: 2px solid $secondary-color;
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__button[aria-expanded="true"]::before,
+  &__button[aria-selected="true"]::before {
+    top: -3px;
+    transform: rotate(45deg);
+  }
+
+  &__panel {
+    padding: 20px;
+    animation: fadein 0.35s ease-in;
+  }
+}
+
+.dark-mode {
+  .accordion {
+    border-color: $dark-mode-grey-two;
+
+    &__item + .accordion__item {
+      border-color: $dark-mode-grey-two;
+    }
+
+    &__button {
+      background-color: $dark-mode-grey;
+      color: $dark-mode-primary;
+    }
+
+    &__button:before {
+      border-color: $dark-mode-primary;
+    }
+  }
+}
+
+[hidden] {
+  display: none;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

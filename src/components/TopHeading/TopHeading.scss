@@ -1,0 +1,33 @@
+@import "../../styles/helpers/_variables.scss";
+@import "../../styles/helpers/_mixins.scss";
+
+.top-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  background-color: $primary-color;
+  padding: 0 20px;
+
+  @include breakpoint(min-width, tablet) {
+    min-height: 350px;
+  }
+
+  &__title {
+    text-align: center;
+
+    @include breakpoint(min-width, tablet) {
+      font-size: 3rem;
+    }
+  }
+}
+
+.dark-mode {
+  .top-heading {
+    background-color: $dark-grey-color;
+
+    &__title {
+      color: $dark-mode-primary;
+    }
+  }
+}

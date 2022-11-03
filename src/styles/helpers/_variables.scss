@@ -1,0 +1,33 @@
+$primary-color: #fec016;
+$secondary-color: #164bc5;
+$green-color: #159943;
+$black-color: #222222;
+$white-color: #ffffff;
+$grey-color: #959595;
+$light-grey-color: #f2f2f2;
+$light-grey-color-one: #fafafa;
+$light-grey-color-two: #eeeeee;
+$dark-grey-color: #303030;
+
+$dark-mode-primary: #c38fff;
+$dark-mode-black: #121212;
+$dark-mode-grey: #1f1f1f;
+$dark-mode-grey-two: #2d2d2d;
+$dark-mode-white: #d4d4d4;
+
+$f-weight-regular: 400;
+$f-weight-bold: 600;
+$f-weight-extra-bold: 700;
+
+$breakpoints: (
+  smallMobile: 320px,
+  mobile: 568px,
+  tablet: 768px,
+  largeTablet: 992px,
+  desktop: 1024px,
+  smallDesktop: 1200px,
+  mediumDesktop: 1280px,
+  largeDesktop: 1400px,
+);
+
+$max-width: 1440px;

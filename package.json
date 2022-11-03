@@ -1,0 +1,43 @@
+{
+  "name": "growymind-wordpress-blog",
+  "private": true,
+  "description": "Gatsby + Wordpress blog",
+  "version": "1.0.0",
+  "author": "Sukhrob Sanhinov",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "gatsby": "^4.0.0",
+    "gatsby-plugin-image": "^2.0.0",
+    "gatsby-plugin-manifest": "^4.24.0",
+    "gatsby-plugin-offline": "^5.0.0",
+    "gatsby-plugin-react-helmet": "^5.0.0",
+    "gatsby-plugin-sass": "^5.24.0",
+    "gatsby-plugin-sharp": "^4.0.0",
+    "gatsby-plugin-use-dark-mode": "^1.6.0",
+    "gatsby-source-filesystem": "^4.0.0",
+    "gatsby-source-wordpress": "^6.0.0",
+    "gatsby-transformer-sharp": "^4.0.0",
+    "html-react-parser": "^1.1.1",
+    "lodash": "^4.17.20",
+    "postcss": "^8.2.10",
+    "react": "^16.8.0",
+    "react-accessible-accordion": "^5.0.0",
+    "react-dom": "^16.8.0",
+    "react-helmet": "^5.2.1",
+    "react-infinite-scroll-component": "^6.1.0",
+    "sass": "^1.55.0",
+    "typeface-open-sans": "^1.1.13",
+    "use-dark-mode": "^2.3.1"
+  },
+  "devDependencies": {
+    "dumper.js": "^1.3.1",
+    "prettier": "2.2.1"
+  }
+}

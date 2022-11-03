@@ -1,1 +1,0 @@
-# growymind-gatsby-wordpress

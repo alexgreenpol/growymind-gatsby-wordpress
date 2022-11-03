@@ -1,0 +1,63 @@
+@import "./helpers/_normalize.scss";
+@import "./helpers/_variables.scss";
+@import "./helpers/_mixins.scss";
+@import "./helpers/_typography.scss";
+@import "./helpers/_wordpress.scss";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+html {
+  font-family: "OpenSans", sans-serif;
+  font-weight: $f-weight-regular;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+body {
+  min-height: 100vh;
+  transition: background-color 0.5s;
+  background-color: $white-color;
+  color: $black-color;
+
+  & a {
+    color: $secondary-color;
+  }
+
+  &.dark-mode {
+    background-color: $dark-mode-black;
+    color: $dark-mode-white;
+
+    & a {
+      color: $dark-mode-primary;
+    }
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.separator {
+  margin: 0 5px;
+}
+
+.non-found-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  & .btn {
+    margin-top: 40px;
+  }
+}

@@ -1,0 +1,20 @@
+@import "../../styles/helpers/_variables.scss";
+@import "../../styles/helpers/_mixins.scss";
+
+.article-highlights {
+  background-color: $light-grey-color-one;
+  border: 1px solid $light-grey-color-two;
+  padding: 20px;
+
+  & ol,
+  ul {
+    margin-left: 20px;
+  }
+}
+
+.dark-mode {
+  .article-highlights {
+    background-color: $dark-mode-grey;
+    border-color: $dark-mode-grey-two;
+  }
+}

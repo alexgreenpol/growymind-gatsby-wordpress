@@ -1,0 +1,57 @@
+@import "../../styles/helpers/_variables.scss";
+@import "../../styles/helpers/_mixins.scss";
+
+.hero {
+  padding: 50px 20px;
+  background-color: $primary-color;
+  min-height: 300px;
+
+  @include breakpoint(min-width, tablet) {
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    padding: 50px 20px 70px 20px;
+  }
+
+  &__content {
+    flex-basis: 60%;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: to-rem(35);
+
+    @include breakpoint(min-width, tablet) {
+      font-size: to-rem(60);
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 40px;
+    font-weight: $f-weight-regular;
+    font-size: to-rem(20);
+
+    @include breakpoint(min-width, tablet) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__illustration {
+    display: none;
+
+    @include breakpoint(min-width, tablet) {
+      display: block;
+    }
+  }
+}
+
+.dark-mode {
+  .hero {
+    background-color: $dark-mode-grey;
+
+    &__title {
+      color: $dark-mode-primary;
+    }
+  }
+}

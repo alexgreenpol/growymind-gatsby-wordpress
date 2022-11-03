@@ -1,0 +1,122 @@
+@import "../../styles/helpers/_variables.scss";
+@import "../../styles/helpers/_mixins.scss";
+
+.blog-post {
+  &__title {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 18px;
+    color: $black-color;
+  }
+
+  &__image {
+    margin-bottom: 25px;
+
+    @include breakpoint(min-width, tablet) {
+      height: 450px;
+    }
+
+    .gatsby-image-wrapper {
+      height: 100%;
+    }
+  }
+
+  &__text {
+    p {
+      margin: 20px 0;
+    }
+
+    ol,
+    ul {
+      margin-left: 50px;
+    }
+
+    blockquote {
+      border-left: 3px solid $grey-color;
+      padding-left: 30px;
+      font-style: italic;
+      margin-left: 50px;
+    }
+
+    figure {
+      max-width: 100%;
+    }
+  }
+
+  &__tags,
+  &__categories {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    a {
+      margin: 0 7px;
+    }
+  }
+
+  &__categories {
+    margin-bottom: 70px;
+  }
+
+  &__faq {
+    margin-bottom: 50px;
+  }
+
+  &__highlights {
+    margin-bottom: 50px;
+  }
+}
+
+.controls {
+  border-top: 1px solid $light-grey-color;
+  border-bottom: 1px solid $light-grey-color;
+  margin-top: 50px;
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0;
+
+    @include breakpoint(min-width, tablet) {
+      align-items: center;
+    }
+  }
+
+  &__list-item {
+    font-size: to-rem(18);
+    margin: 20px 0;
+
+    @include breakpoint(min-width, tablet) {
+      margin: 0;
+    }
+
+    @include breakpoint(min-width, largeTablet) {
+      font-size: to-rem(20);
+    }
+
+    @include breakpoint(min-width, largeDesktop) {
+      font-size: to-rem(30);
+    }
+  }
+}
+
+.dark-mode {
+  .controls {
+    border-top: 1px solid $dark-mode-grey;
+    border-bottom: 1px solid $dark-mode-grey;
+  }
+
+  .blog-post {
+    &__title {
+      color: $dark-mode-primary;
+    }
+
+    &__text {
+      blockquote {
+        border-color: $dark-mode-primary;
+      }
+    }
+  }
+}

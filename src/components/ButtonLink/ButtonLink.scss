@@ -1,0 +1,29 @@
+@import "../../styles/helpers/_variables.scss";
+@import "../../styles/helpers/_mixins.scss";
+
+.btn {
+  display: inline-block;
+  background-color: $black-color;
+  color: $white-color;
+  font-size: to-rem(18);
+  padding: 5px 10px;
+  border-radius: 25px;
+  min-width: 200px;
+  text-align: center;
+
+  @include breakpoint(min-width, tablet) {
+    font-size: to-rem(20);
+    padding: 8px 15px;
+  }
+
+  &:hover {
+    background-color: $dark-grey-color;
+  }
+}
+
+.dark-mode {
+  .btn {
+    background-color: $dark-mode-primary;
+    color: $white-color;
+  }
+}

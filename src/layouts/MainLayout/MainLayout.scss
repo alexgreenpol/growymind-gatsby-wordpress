@@ -1,0 +1,22 @@
+@import "../../styles/helpers/_variables.scss";
+@import "../../styles/helpers/_mixins.scss";
+
+.page {
+  &--contained {
+    border-top: 1px solid $light-grey-color-two;
+
+    .page__content {
+      max-width: $max-width;
+      margin: 0 auto;
+      padding: 90px 20px 0 20px;
+    }
+  }
+}
+
+.dark-mode {
+  .page {
+    &--contained {
+      border-top: 1px solid $dark-mode-grey;
+    }
+  }
+}

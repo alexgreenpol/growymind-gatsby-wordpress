@@ -1,0 +1,116 @@
+@import "../../styles/helpers/_variables.scss";
+@import "../../styles/helpers/_mixins.scss";
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  color: $black-color;
+  border-bottom: 1px solid $light-grey-color;
+
+  @include breakpoint(min-width, tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.logo {
+  height: 28px;
+
+  @include breakpoint(min-width, tablet) {
+    height: 30px;
+  }
+
+  &__link {
+    display: inline-block;
+    width: 180px;
+    height: 28px;
+    background-image: url(../../images/logo-black.svg);
+    background-size: 180px;
+    background-repeat: no-repeat;
+    font-size: 0;
+    line-height: to-rem(45);
+
+    @include breakpoint(min-width, tablet) {
+      width: 200px;
+      height: 30px;
+      background-size: 200px;
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: inherit;
+  width: 100%;
+  flex-basis: 80%;
+  margin-top: 20px;
+
+  @include breakpoint(min-width, tablet) {
+    justify-content: center;
+    margin-top: 0;
+  }
+
+  &__link {
+    margin: 0 8px;
+    color: $black-color;
+
+    &:hover {
+      color: $secondary-color;
+    }
+
+    &--active {
+      color: $secondary-color;
+    }
+  }
+}
+
+.logo,
+.darkmode {
+  @include breakpoint(min-width, tablet) {
+    flex-basis: 10%;
+  }
+}
+
+.darkmode {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 10;
+
+  @include breakpoint(min-width, tablet) {
+    position: static;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.dark-mode {
+  .header {
+    color: $dark-mode-white;
+    border-color: $dark-grey-color;
+  }
+
+  .logo {
+    &__link {
+      background-image: url(../../images/logo-grey.svg);
+    }
+  }
+
+  .menu {
+    &__link {
+      color: $dark-mode-white;
+
+      &:hover {
+        color: $dark-mode-primary;
+      }
+
+      &--active {
+        color: $dark-mode-primary;
+      }
+    }
+  }
+}
